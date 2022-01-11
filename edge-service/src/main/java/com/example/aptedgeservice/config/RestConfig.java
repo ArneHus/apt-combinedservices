@@ -3,6 +3,7 @@ package com.example.aptedgeservice.config;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.client.LaxRedirectStrategy;
 import org.apache.http.ssl.TrustStrategy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,6 +33,7 @@ public class RestConfig {
 
         CloseableHttpClient httpClient = HttpClients.custom()
                 .setSSLSocketFactory(csf)
+                .setRedirectStrategy(new LaxRedirectStrategy())
                 .build();
 
         HttpComponentsClientHttpRequestFactory requestFactory =
