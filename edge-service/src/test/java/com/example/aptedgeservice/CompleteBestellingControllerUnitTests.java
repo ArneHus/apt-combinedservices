@@ -83,7 +83,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenGetBestellingByBestelnummer_thenReturnCompleteBestelling() throws Exception{
         // GET bestelling with bestelnummer 1
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + bestellingServiceBaseUrl + "/bestellingen/bestelnummer/1")))
+                requestTo(new URI("http://" + bestellingServiceBaseUrl + "/bestellingen/bestelnummer/1")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -92,7 +92,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET personeel with personeelsnummer K20220103AH
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
+                requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -101,7 +101,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20220103PM
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
+                requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -110,7 +110,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20200103PH
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
+                requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -137,7 +137,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenGetBestellingen_thenReturnAllCompleteBestellingen() throws Exception{
         // GET bestellingen
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + bestellingServiceBaseUrl + "/bestellingen")))
+                requestTo(new URI("http://" + bestellingServiceBaseUrl + "/bestellingen")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -146,7 +146,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET personeel with personeelsnummer K20220103AH
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
+                requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -155,7 +155,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20220103PM
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
+                        requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -164,7 +164,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20200103PH
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
+                        requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -173,7 +173,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET personeel with personeelsnummer K20220103TS
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel/K20220103TS")))
+                requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel/K20220103TS")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -182,7 +182,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20220103PM
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
+                requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -191,7 +191,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20200103PS
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20200103PS")))
+                requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20200103PS")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -232,7 +232,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // POST nieuwe bestelling
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + bestellingServiceBaseUrl + "/bestellingen")))
+                requestTo(new URI("http://" + bestellingServiceBaseUrl + "/bestellingen")))
                 .andExpect(method(HttpMethod.POST))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -241,7 +241,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET personeel with personeelsnummer K20220103AH
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
+                requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -250,7 +250,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20200103PH
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
+                requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -259,7 +259,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20200103PS
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20200103PS")))
+                requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20200103PS")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -290,7 +290,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // PUT update bestelling with new pizza's
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + bestellingServiceBaseUrl + "/bestellingen")))
+                        requestTo(new URI("http://" + bestellingServiceBaseUrl + "/bestellingen")))
                 .andExpect(method(HttpMethod.PUT))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -299,7 +299,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET personeel with personeelsnummer K20220103AH
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
+                        requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -308,7 +308,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20200103PH
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
+                        requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20200103PH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -317,7 +317,7 @@ public class CompleteBestellingControllerUnitTests {
 
         // GET gerecht with gerechtnummer 20200103PS
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20200103PS")))
+                        requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20200103PS")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -346,7 +346,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenDeleteBestelling_thenReturnStatusOk() throws Exception{
         // DELETE bestelling
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + bestellingServiceBaseUrl + "/bestellingen/bestelnummer/1")))
+                requestTo(new URI("http://" + bestellingServiceBaseUrl + "/bestellingen/bestelnummer/1")))
                 .andExpect(method(HttpMethod.DELETE))
                 .andRespond(withStatus(HttpStatus.OK)
                 );
@@ -359,7 +359,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenGetPersoneel_thenReturnAllPersoneel() throws Exception{
         // GET personeel
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel")))
+                requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -388,7 +388,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenGetPersoneelByPersoneelsNummer_thenReturnPersoneel() throws Exception{
         // GET personeel with personeelsnummer
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
+                        requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel/K20220103AH")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -408,7 +408,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenGetPersoneelByFunctie_thenReturnPersoneel() throws Exception{
         // GET personeel by functie
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + personeelServiceBaseUrl + "/personeel/functie/keuken")))
+                        requestTo(new URI("http://" + personeelServiceBaseUrl + "/personeel/functie/keuken")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -433,7 +433,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenGetGerechten_thenReturnAllGerechten() throws Exception{
         // GET gerechten
         mockServer.expect(ExpectedCount.once(),
-                requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten")))
+                requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
@@ -459,7 +459,7 @@ public class CompleteBestellingControllerUnitTests {
     public void whenGetGerechtByGerechtnummer_thenReturnGerecht() throws Exception{
         // GET gerecht by gerechtNummer
         mockServer.expect(ExpectedCount.once(),
-                        requestTo(new URI("https://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
+                        requestTo(new URI("http://" + gerechtServiceBaseUrl + "/gerechten/20220103PM")))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
