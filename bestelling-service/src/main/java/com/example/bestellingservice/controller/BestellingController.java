@@ -74,15 +74,14 @@ public class BestellingController {
 
     @PostConstruct
     public void fillDB() {
-        bestellingRepository.deleteAll();
         if(bestellingRepository.count() == 0) {
             List<String> gerechten = new ArrayList<>();
             gerechten.add("20220103PM");
             gerechten.add("20200103PH");
             gerechten.add("20200103PS");
-            Bestelling bestellingArne1 = new Bestelling("K20220103AH", gerechten);
-            Bestelling bestellingArne2 = new Bestelling("K20220103AH", gerechten);
-            Bestelling bestellingToon = new Bestelling("K20220103TS", gerechten);
+            Bestelling bestellingArne1 = new Bestelling("Z20220104LP", gerechten);
+            Bestelling bestellingArne2 = new Bestelling("Z20220104LP", gerechten);
+            Bestelling bestellingToon = new Bestelling("Z20220104BM", gerechten);
             Bestelling bestellingNiels = new Bestelling("Z20220103NV", gerechten);
             bestellingArne1.setBestelNummer(generateBestelnummer(bestellingArne1.getPersoneelsNummer()));
             bestellingArne2.setBestelNummer(generateBestelnummer(bestellingArne2.getPersoneelsNummer()));
